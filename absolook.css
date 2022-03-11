@@ -1,5 +1,6 @@
 body{
     background-image: url(https://dnx.neocities.org/ideeo-imgs/background.png);
+    overflow-x: hidden;
 }
 
 .display1, .presentamos, .frase{
@@ -92,6 +93,7 @@ h1{
 
 /* Third display: */
 .absolookImgs{
+    width: 95vw;
     display: grid;
     grid-template-rows: 0.9fr 0.7fr 0.9fr 0.6fr;
     grid-template-columns: 1fr 1fr;

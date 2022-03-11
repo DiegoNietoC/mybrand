@@ -1,0 +1,347 @@
+html{
+    scroll-behavior: smooth;    
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.displayQueHacemos, .display, .nosotros, .displayCasosExito{
+    height: 100vh;
+}
+nav, main, .display, .compruebalo, .enMyBrand, .nosotros, .contactanos, .displayQueHacemos, .displayCasosExito, footer{
+    display: flex;
+}
+main, .compruebalo, .contactanos,  .displayQueHacemos{
+    background-image: url(https://dnx.neocities.org/ideeo-imgs/background.png);
+}
+
+/* Nav: */
+nav{
+    font-family: 'Montserrat';
+    font-size: 10pt;
+    font-weight: 500;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    position: fixed;
+    width: 90.7vw;
+    z-index: 10;
+    margin-top: -1.3vh;
+    margin-left: -0.7vw;
+}
+
+.logo{
+    width: 12vw;
+}
+
+nav div, .menu_on, .menu_off{
+    display: flex;
+    align-items: center;
+}
+
+nav div img{
+    height: 1.8vw;
+}
+
+.navElems{
+    margin-left: 3vw;
+    color: gray;
+    text-decoration: none;
+    transition: color 0.4s;
+}
+.navElems:hover{
+    color: black;
+    transition: color 0.4s;
+}
+
+.menuButton{
+    display: none;
+}
+
+/* Seven display: */
+.contactanos{
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.contactanos div, .contactanos form{
+    width: 30vw;
+    height: 30vw;
+}
+
+.contactanos div{
+    position: relative;
+    background-color: #FFE610;
+    border: 1px solid #FFE610;
+    display: flex;
+    align-items: center;
+}
+.contactanos div img{
+    height: 90%;
+    margin-left: 2vw;
+}
+.contactanos div h2{
+    position: absolute;
+    font-size: 30pt;
+    font-weight: 400;
+    padding-left: 2ch;
+    margin-bottom: 5ch;
+}
+
+.contactanos form{
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+
+.contactanos form input, .contactanos form textarea{
+    margin-top: -2vw;
+    resize: none;
+    background-color: rgb(230, 230, 230);
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 5px;
+}
+.contactanos form input{
+    height: 2.6vw;
+}
+.contactanos form textarea{
+    height: 5vw;
+}
+
+.contactanos form input[type="submit"]{
+    margin-top: 0vw;
+    width: 50%;
+    height: 3vw;
+    border: 1px solid black;
+    border-radius: 0px;
+    background-color: white;
+}
+.contactanos form input[type="submit"]:hover{
+    background-color: rgb(230, 230, 230);
+}
+
+/* Footer: */
+footer{
+    background-color: white;
+    font-size: 10pt;
+    height: 20vh;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.footer1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer1 img{
+    width: 9vw;
+}
+.footer2{
+    display: flex;
+    align-items: center;
+}
+.footer2_1{
+    margin-right: 10vw;
+}
+.footer2_2{
+    width: 4vw;
+    display: flex;
+    justify-content: space-between;
+}
+.footer2_2 img{
+    height: 1.8vw;
+}
+
+
+
+/*
+    Responsive:
+*/
+@media all and (max-width:780px){
+    /* Nav: */
+    nav{
+        top: 7px;
+        left: 0px;
+    }
+
+    .logo{
+        width: 22vw;
+    }
+
+    .menu_on, .menu_off{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: start;
+        position:absolute;
+        width: 100%;
+        top: 9.8vw;
+        left: -1vw;
+        padding-top:4vw;
+        padding-left: 3vw;
+        background-color: white;
+    }
+
+    .menu_on{
+        transform: scaleY(0);
+        transform-origin: top;
+        animation-name: aparecer;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        
+    }
+    @keyframes aparecer {
+        0% {
+          transform: scaleY(0);
+        }
+        100% {
+          transform: scaleY(1);
+        }
+      }
+      
+    .menu_off{
+        transform: scaleY(1);
+        transform-origin: top;
+        animation-name: desaparecer;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes desaparecer {
+        0% {
+          transform: scaleY(1);
+        }
+        100% {
+          transform: scaleY(0);
+        }
+      }
+
+    nav div .navElems{  
+        margin-bottom: 5vw;
+    }
+    nav div img{
+        display: none;
+    }
+
+    .menuButton{
+        width: 9vw;
+        height: 7vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid gray;
+        background-color: white;
+        border-radius: 5px;
+    }
+    .menuButton:hover{
+        background-color: rgb(230, 230, 230);
+    }
+
+    .menuButton img{
+        width: 70%;
+        opacity: 0.5;
+    }
+
+    /* Seven display: */
+    .contactanos{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .contactanos div{
+        width: 70vw;
+        height: 15vw;
+    }
+    .contactanos form{
+        width: 58vw;
+        height: 80vw;
+    }
+
+    .contactanos div{
+        justify-content: center;
+    }
+    .contactanos div img{
+        display: none;
+    }
+    .contactanos div h2{
+        font-size: 20pt;
+        font-weight: 500;
+        padding-left: 0ch;
+        margin-bottom: 1ch;
+    }
+
+    .contactanos form{
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+
+    .contactanos form input{
+        height: 8vw;
+    }
+    .contactanos form textarea{
+        height: 16vw;
+    }
+
+    .contactanos form input[type="submit"]{
+        width: 56%;
+        height: 8vw;
+    }
+
+    /* Footer: */
+    footer{
+        font-size: 10pt;
+        flex-direction: column;
+        padding-left: 0vw;
+        padding-right: 0vw;
+        padding-bottom: 40vw;
+        padding-top: 10vw;
+    }
+    
+    .footer1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 8vw;
+    }
+    .footer1 img{
+        width: 25vw;
+    }
+
+    .footer2_1{
+        margin-right: 20vw;
+    }
+    .footer2_2{
+        width: 12vw;
+        margin-right: 15vw;
+    }
+    .footer2_2 img{
+        height: 5vw;
+    }
+
+}
+
+/* General animation: */
+@keyframes appearContent {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,208 @@
+body{
+    background-image: url(https://dnx.neocities.org/ideeo-imgs/background.png);
+}
+
+.display1, .presentamos, .frase{
+    display: flex;
+}
+
+
+
+.inicio, h1{
+    margin-left: 8.5vw;
+}
+.inicio{
+    padding-top: 5vw;
+}
+h1{
+    font-size: 45pt;
+    font-weight: 400;
+}
+.inicioLinks{
+    text-decoration: none;
+    color: black;
+    transition: color 0.5s;
+}
+.inicioLinks:visited{
+    color: black;
+}
+.inicioLinks:hover{
+    color: #FFE610;
+    transition: color 0.5s;
+}
+
+/* First display: */
+.display1{
+    color: white;
+    height: 80vh;
+    background-color: black;
+    align-items: center;
+    justify-content: space-around;
+    line-height: 20pt;
+
+}
+.display1 div{
+    width: 40%;
+}
+
+.display1 h2{
+    font-size: 25pt;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+.display1 p{
+    margin-bottom: 5vw;
+    font-weight: 300;
+}
+.display1 li{
+    font-weight: 300;
+} 
+
+.display1 span{
+    background-color: #FFE610;
+    width: 25vw;
+    height: 18vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -2.5vw;
+}
+.display1 span img{
+    width: 25vw;
+    height: 18vw;
+    margin-top: 4vw;
+    margin-right: 6vw;
+}
+
+/* Second display: */
+.presentamos{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 18vw;
+}
+.presentamos h2{
+    font-size: 25pt;
+}
+.presentamos p{
+    text-align: center;
+    width: 70%;
+    font-size: 15pt;
+}
+
+/* Third display: */
+.absolookImgs{
+    display: grid;
+    grid-template-rows: 0.9fr 0.7fr 0.9fr 0.6fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:    "a a"
+                            "b c"
+                            "d d"
+                            "e f";
+}
+
+.absolookImgs img{
+    width: 100%;
+    height: 100%;
+}
+
+.imgA{ grid-area: a;}
+.imgB{ grid-area: b;}
+.imgC{ grid-area: c;}
+.imgD{ grid-area: d;}
+.imgE{ grid-area: e;}
+.imgF{ grid-area: f;}
+
+/* Fourth display: */
+.frase{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -50pt;
+}
+.fraseQuote{
+    text-align: center;
+    font-size: 30pt;
+    font-weight: 300;
+    width: 85%;
+}
+.fraseAuthor{
+    margin-top: -20pt;
+    text-align: center;
+    font-size: 18pt;
+    font-weight: 300;
+}
+
+nav{
+    margin-top: -2vw;
+}
+.contactanos form{
+    margin-top: 13px;
+}
+/*
+    Responsive:
+*/
+@media all and (max-width:780px){
+
+    /* First display: */
+    .display1{
+        height: 170vw;
+        flex-direction: column;
+    }
+    .display1 div{
+        width: 80%;
+    }
+
+    .display1 h2{
+        font-size: 23pt;
+        font-weight: 700;
+        letter-spacing: 3px;
+    }
+    .display1 p{
+        margin-bottom: 5vw;
+        font-weight: 300;
+    }
+    .display1 li{
+        font-weight: 300;
+    } 
+
+    .display1 span{
+        width: 60vw;
+        height: auto;
+        margin-top: -0vw;
+        margin-bottom: 5vw;
+    }
+    .display1 span img{
+        width: 60vw;
+        height: auto;
+        margin-top: 0vw;
+        margin-right: 0vw;
+    }
+
+    /* Second display: */
+    .presentamos{
+        height: auto;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+    }
+    .presentamos h2{
+        font-size: 20pt;
+    }
+    .presentamos p{
+        width: 90%;
+        font-size: 12pt;
+    }
+
+    /* Fourth display: */
+    .frase{
+        margin-bottom: 0pt;
+    }
+    .fraseQuote{
+        font-size: 25pt;
+    }
+
+    .contactanos form{
+        margin-top: 0px;
+    }
+
+}

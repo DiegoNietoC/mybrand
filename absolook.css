@@ -146,9 +146,15 @@ nav{
 */
 @media all and (max-width:780px){
 
+    .inicio{
+        padding-top: 8vw;
+    }
+
     /* First display: */
     .display1{
-        height: 170vw;
+        height: auto;
+        padding-top: 4vw;
+        padding-bottom: 4vw;
         flex-direction: column;
     }
     .display1 div{
